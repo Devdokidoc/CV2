@@ -3,176 +3,76 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="keywords" content="">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Portfolio de Mathieu Argibay</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700&display=swap" rel="stylesheet">
     <script src="script.js" defer ></script>
 </head>
 <body>
+
     <header>
-    <h1><button  onclick="window.location.href='https://portfolio-devdokidocs-projects.vercel.app/portfolio/';"><i class="fa-solid fa-turn-down fa-fade fa-2xs" style="color: #d68710; transform: rotate(90deg);"></i> Mathieu Argibay</button></h1>
-    
-    <div>
-        <button id="theme-toggle" aria-label="Changer le thème"><i class="fa-solid fa-moon fa-fade"></i></button>
+        <nav>
+            <ul>
+                <li><a href="#about">À propos</a></li>
+                <li><a href="#projects">Projets</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="https://cvma-one.vercel.app/cvtest/">Mon CV</a></li>
+            </ul>
+        </nav>
+        <div class="intro">
+            <h1>Mathieu Argibay</h1>
+            <p>Développeur Web</p>
+            <a href="#projects" class="cta-button">Voir mes Projets</a>
         </div>
     </header>
-    
-    <section>
-        <div class="photo">
-            <img src="./img/photoCVtest2.JPG" alt="Ma photo de profil">
-        </div>
-        <div class="prez">
-            <h2 class="titre">Qui suis-je ?</h2>
-            <p>Ancien militaire pendant 9 ans, j’ai développé une grande <b>capacité d’adaptation. Rigueur, discipline, réactivité, professionnalisme, esprit d’équipe</b> sont les qualités que j’ai acquises durant ces années dans l’armée de terre.<br>
-            Mon désir d’apprendre est sans limite et je saurai mettre à profit mes compétences actuelles et futures dans votre entreprise.</p>
-            <a href="https://smallpdf.com/fr/file#s=b4231464-0cad-4997-ad60-c3a33635e0c8" target="_blank" download>Télécharger mon CV</a>
-        </div>
-        <div class="contact">
-            <h2 class="titre">Informations de contact</h2>
-            <div class="contact-flex">
-                <p>Nom :</p>
-                <p>Argibay Mathieu</p>
+
+    <section id="about" class="section about">
+        <h2>À propos de moi</h2>
+        <p>Ancien militaire, j'ai cultivé rigueur, discipline et réactivité, j'ai su transformer ces qualités pour relever des défis techniques et créatifs en tant que développeur et designer.
+            <br>Passionné par les interfaces innovantes et esthétiques, je me spécialise dans la création d'expériences visuelles uniques, alliant tons vibrants et animations fluides.
+            <br> Mon sens du détail et ma capacité d'adaptation me permettent de concevoir des solutions sur mesure, tout en maintenant un haut niveau de professionnalisme et de collaboration.
+            <br> Toujours avide de nouvelles connaissances, je mets mon expertise et ma curiosité sans limite au service de chaque projet, afin de créer des interfaces aussi fonctionnelles que captivantes.
+
+        </p>
+    </section>
+
+    <section id="projects" class="section projects">
+        <h2>Mes Projets</h2>
+        <div class="project-grid">
+            <div class="project">
+                <img src="./img/gestionCommerciale.png" alt="Projet 1">
+                <h3>Application web de gestion commerciale</h3>
+                <p>Une application web avec des fonctionnalités de base de données</p>
             </div>
-            <div class="contact-flex">
-                <p>Adresse :</p>
-                <p>Saint-Claud 16450</p>
+            <div class="project">
+                <!-- <img src="project2.jpg" alt="Projet 2"> -->
+                <h3>A venir</h3>
+                <p>Un site de portfolio interactif avec des transitions dynamiques.</p>
             </div>
-            <div class="contact-flex">
-                <p>Téléphone :</p>
-                <p>06 43 03 19 62</p>
-            </div>
-            <div class="contact-flex">
-                <p>Mail :</p>
-                <p><a href="mailto:argibay.mathieu@gmail.com">argibay.mathieu@gmail.com</a></p>
-            </div>
-            <div class="contact-flex">
-                <p>Permis :</p>
-                <p>B C CE</p>
+            <div class="project">
+                <!-- <img src="project3.jpg" alt="Projet 3"> -->
+                <h3>A venir</h3>
+                <p>Design d'une boutique en ligne avec une interface utilisateur innovante.</p>
             </div>
         </div>
     </section>
-    
-    <section>
-        <h2 class="titre">Expériences professionnelles</h2>
-        <div class="exp">
-            <div class="exp-logo">
-                <a href="#"><img src="./img/soldat.png" alt="Logo Ministère des Armées"></a>
-            </div>
-            <div class="exp-info">
-                <h3>Ministère des Armées</h3>
-                <h4>Brie (16)</h4>
-                <h4>2015 – 2024</h4>
-            </div>
-            <div class="exp-desc">
-                <p>Magasinier Gestion de matériel et de véhicules | Organisation et préparation de mission de transport super poids lourd en tant que chef de groupe | Formation et encadrement des nouveaux engagés.</p>
-            </div>
-        </div>
-        <div class="exp">
-            <div class="exp-logo">
-                <a href="#"><img src="./img/pelle.png" alt="Logo Travaux publics"></a>
-            </div>
-            <div class="exp-info">
-                <h3>Travaux publics</h3>
-                <h4>Egletons(19)</h4>
-                <h4>2014-2015</h4>
-            </div>
-            <div class="exp-desc">
-                <p>Application des savoir-faire | Travail en autonomie | Prise d’initiative</p>
-            </div>
-        </div>
+
+    <section id="contact" class="section contact">
+        <h2>Contactez-moi</h2>
+        <form id="contact-form">
+            <input type="text" name="name" placeholder="Votre nom" required>
+            <input type="email" name="email" placeholder="Votre email" required>
+            <textarea name="message" placeholder="Votre message" rows="6" required></textarea>
+            <button type="submit">Envoyer</button>
+        </form>
+        <p id="form-message"></p>
     </section>
-    
-    <section>
-        <h2 class="titre">Diplômes et Formations</h2>
-        <div class="exp">
-            <div class="exp-logo">
-                <a href="#"><img src="./img/CMFP.png" alt="Logo EDHEC"></a>
-            </div>
-            <div class="exp-info">
-                <h3>Développeur Web Niveau V | 2024-2025 (En cours)</h3>
-                <h4>2024 - 2025 (En cours)</h4>
-            </div>
-            <div class="exp-desc">
-                <p>Centre militaire de formation professionnelle (CMFP/AFPA)</p>
-            </div>
-        </div>
-        <div class="exp">
-            <div class="exp-logo">
-                <a href="#"><img src="./img/soldat.png" alt="Logo Dumont"></a>
-            </div>
-            <div class="exp-info">
-                <h3>Certificat de qualifications technique supérieur</h3>
-                <h4>2021</h4>
-            </div>
-            <div class="exp-desc">
-                <p>Permettant de diriger jusqu’à 10 personnes</p>
-            </div>
-        </div>
-        <div class="exp">
-            <div class="exp-logo">
-                <a href="#"><img src="./img/croixrouge.png" alt="Logo PSC1"></a>
-            </div>
-            <div class="exp-info">
-                <h3>PSC1</h3>
-                <h4>2016 recyclé en 2024</h4>
-            </div>
-            <div class="exp-desc">
-                <p>Secourisme</p>
-            </div>
-        </div>
-        <div class="exp">
-            <div class="exp-logo">
-                <a href="#"><img src="https://www.pierre-giraud.com/wp-content/uploads/2019/07/dd.png" alt="Logo BEP Travaux publics"></a>
-            </div>
-            <div class="exp-info">
-                <h3>BEP Travaux publics</h3>
-                <h4>2012 – 2014</h4>
-            </div>
-            <div class="exp-desc">
-                <p>Lycée Pierre Caraminot<br>Acquisition des savoirs faire technique des travaux publics</p>
-            </div>
-        </div>
-    </section>
-    
-    <section>
-        <h2 class="titre">Compétences</h2>
-        <div class="comp">
-            <p>HTML <i class="fa-brands fa-html5"></i></p>
-            <p>CSS <i class="fa-brands fa-css3-alt"></i></p>
-        </div>
-        <div class="comp">
-            <p>MySQL <i class="fa-solid fa-database"></i></p>
-            <p>PHP <i class="fa-brands fa-php"></i></p>
-        </div>
-        <div class="comp">
-            <p>Symfony <i class="fa-brands fa-symfony"></i></p>
-            <p>TOSA <i class="fa-solid fa-file-excel"></i> 991/1000</p>
-        </div>           
-        <div class="comp">
-            <p>TOEIC <i class="fa-solid fa-language"></i> 22/22</p>
-            <p>Voltaire <i class="fa-solid fa-language"></i> 913/1000</p>
-        </div>
-    </section>
-    
-    <section>
-        <h2 class="titre">Centres d'intérêt</h2>
-        <figure class="interet">
-            <img src="./img/perdu-randonnee-reflexes.jpg" alt="Randonnée">
-            <figcaption>Randonnée</figcaption>
-        </figure>
-        <figure class="interet">
-            <img src="./img/run.jpg" alt="Course à pied">
-            <figcaption>Course à pied</figcaption>
-        </figure>
-        <figure class="interet">
-            <img src="./img/guitare.jpg" alt="Guitare">
-            <figcaption>Guitare</figcaption>
-        </figure>
-    </section>
-    
-    <footer class="center">
-        <p>CopyRight &copy; Mathieu Argibay 2024</p>
+
+    <footer>
+        <p>2024 &copy; Mathieu Argibay - Tous droits réservés</p>
     </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@2.4.1/dist/email.min.js"></script>
 </body>
 </html>
