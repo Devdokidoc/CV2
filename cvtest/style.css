@@ -44,7 +44,7 @@ header div {
     display: flex;
     width: 30px;
     height: 30px;
-    margin-top:4.5%;
+    margin-top:3%;
     margin-right:20%;
 
 
@@ -82,7 +82,7 @@ header h1 {
     padding-left: 3%;
     margin-left: 10%;
     color: white;
-    
+    transition: transform 0.4s ease;
 
 }
 header h1 button{
@@ -90,14 +90,19 @@ header h1 button{
     
 }
 
+header h1:hover{
+    color:rgb(202, 122, 11);
+    cursor: pointer;
+    transform: scale(1.1);
+}
 
-button:hover{
+/* button:hover{
     color:#f39c12;
     cursor: pointer;
     transform: scale(1.1);
     transition: 200ms;
 
-}
+} */
 
 
 footer {
@@ -180,6 +185,7 @@ body.light-mode a {
 /* SECTION INFOS */
 .photo {
     text-align: center;
+
 }
 
 .photo img {
@@ -191,7 +197,7 @@ body.light-mode a {
     margin-top: -90px;
     transition: transform 0.4s ease;
 }
-.photo:hover img{
+.photo img:hover{
     transform: scale(1.3);
 
     cursor: pointer;
@@ -283,16 +289,22 @@ body.light-mode a {
     flex-flow: row wrap;
     align-items: center;
     padding: 15px;
+
 }
 
 .comp p {
     flex: 0 0 50%;
     transition: transform 0.4s ease;
+
+    text-align: center;
+    
+
+
 }
-.comp p:hover{
-    color: blue;
+.comp :hover {
+    color: rgb(202, 122, 11);
     transform: scale(1.2);
-    /* transform: translateX(-30px); */
+    transform: translateX(-30px);
     
     cursor: pointer;
 }
@@ -403,11 +415,18 @@ body.light-mode a {
         justify-content: center;
 
     }
+
 }
 
 @media screen and (max-width: 400px){
 
     header h1{
         font-size: 1.05em;
+    }
+    .comp p {
+        flex: 0 0 50%;
+        transition: transform 0.4s ease;
+    
+        text-align: left
     }
 }
