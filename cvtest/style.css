@@ -44,8 +44,8 @@ header div {
     display: flex;
     width: 30px;
     height: 30px;
-    margin-top:3%;
-    margin-right:20%;
+    /* margin-top:3%; */
+    margin-right:2%;
 
 
 }
@@ -126,6 +126,8 @@ section {
     background-color: #fff; /* Couleur de fond par défaut des sections */
     border-radius: 5px;
 }
+
+
 
 section h2 {
     margin: 15px 0;
@@ -257,16 +259,20 @@ body.light-mode a {
     border-bottom: 1px solid #bbb;
     padding-bottom: 10px;
     margin-bottom: 10px;
+
 }
 
 .exp-info {
     display: flex;
     flex-flow: column wrap;
+    /* justify-content: space-evenly; */
+    gap: 10px;
 }
 
 .exp-logo {
     flex: 0 0 25%;
     max-width: 100px;
+    margin: 0 auto;
 }
 
 .exp-info {
