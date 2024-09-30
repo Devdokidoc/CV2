@@ -126,7 +126,7 @@ section {
     width: 100%;
     padding-bottom: 20px;
     margin: 20px auto;
-    box-shadow: 10px 10px 10px #f5f4f4;
+    box-shadow: 5px 5px 5px  #f5f4f4;
     background-color: #fff; /* Couleur de fond par défaut des sections */
     border-radius: 5px;
 }
