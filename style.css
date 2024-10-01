@@ -1,0 +1,446 @@
+/* STYLES GENERAUX */
+* {
+    font-family: Avenir, sans-serif;
+    padding: 0;
+    margin: 0;
+    text-align: justify;
+    box-sizing: border-box;
+}
+
+html{
+    overflow-x: hidden;
+}
+body {
+    background: #f1f1f1; /* Couleur de fond du thème clair par défaut */
+    color: #333; /* Couleur du texte par défaut */
+    overflow-x: hidden;
+}
+
+p {
+    font-size: 1em;
+    line-height: 1.5em;
+}
+
+a {
+    text-decoration: none;
+    color: #333; /* Couleur des liens par défaut */
+}
+
+/* BOUTON DE CHANGEMENT DE THÈME */
+header #theme-toggle {
+    background-color: rgb(59, 58, 58); /* Bleu foncé pour le bouton */
+    color: #fff; /* Texte blanc pour le bouton */
+    border: none;
+    padding: px;
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    cursor: pointer;
+    justify-content: center;
+    align-items: center;
+    font-size: 1em;    transition: background-color 0.3s, color 0.3s;
+
+
+}
+header div {
+    /* border: solid red 2px; */
+    /* margin-left: 10%; */
+    display: flex;
+    width: 30px;
+    height: 30px;
+    /* margin-top:3%; */
+    margin-right:2%;
+
+
+}
+
+header div button {
+        text-align: center;
+
+}
+
+header #theme-toggle:hover {
+    background-color: #f39c12; /* gold pour le survol */
+}
+
+/* HEADER & FOOTER */
+header, footer {
+    width: 100%;
+    padding: 15px 0;
+    background-color: #0056b3; /* Couleur de fond du header et footer */
+    color: #fff; /* Couleur du texte du header et footer */
+    box-shadow: 0px 0px 15px #333;
+}
+
+header {
+    border-bottom: 2px solid #fff;
+    height: 125px;
+    display: flex;
+}
+
+header h1 {
+    display: flex;
+    font-size: 1.5em;
+    width: 100%;
+    height: 40%;
+    padding-left: 3%;
+    margin-left: 10%;
+    color: white;
+
+
+}
+header h1 button{
+    background: none;
+    color: white;
+    border: none;
+    font-size: 1.3em;
+    transition: transform 0.4s ease;
+    
+}
+
+header h1 :hover{
+    color:rgb(202, 122, 11);
+    cursor: pointer;
+    transform: scale(1.1) translatex(-25px);
+}
+
+/* button:hover{
+    color:#f39c12;
+    cursor: pointer;
+    transform: scale(1.1);
+    transition: 200ms;
+
+} */
+
+
+footer {
+    border-top: 2px solid #fff;
+    text-align: center;
+}
+
+/* SECTIONS */
+section {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    width: 100%;
+    padding-bottom: 20px;
+    margin: 20px auto;
+    box-shadow: 5px 5px 5px  #f5f4f4;
+    background-color: #fff; /* Couleur de fond par défaut des sections */
+    border-radius: 5px;
+}
+
+
+
+section h2 {
+    margin: 15px 0;
+    width: 90%;
+}
+
+section > div {
+    width: 90%;
+}
+
+/* THÈME SOMBRE */
+body.dark-mode {
+    background-color: #2d2d2d; /* Fond sombre */
+    color: #f1f1f1; /* Texte clair */
+}
+
+body.dark-mode header, 
+body.dark-mode footer {
+    background-color: #1c1c1c; /* Fond du header et footer sombre */
+    color: #f1f1f1; /* Texte clair */
+}
+
+body.dark-mode section {
+    background-color: #333; /* Fond sombre des sections */
+    color: #f1f1f1; /* Texte clair des sections */
+}
+
+body.dark-mode .titre {
+    color: #d3a0ff; /* Violet clair */
+}
+
+body.dark-mode a {
+    color: #32055a; /* Liens en violet clair */
+}
+
+/* THÈME CLAIR */
+body.light-mode {
+    background-color: #f1f1f1; /* Fond clair */
+    color: #333; /* Texte sombre */
+}
+
+body.light-mode header, 
+body.light-mode footer {
+    background-color: #0056b3; /* Fond du header et footer bleu */
+    color: #fff; /* Texte blanc */
+}
+
+body.light-mode section {
+    background-color: #e0e0e0; /* Fond des sections en gris clair */
+    color: #333; /* Texte sombre des sections */
+}
+
+body.light-mode .titre {
+    color: #003d80; /* Bleu foncé */
+}
+
+body.light-mode a {
+    color: #003d80; /* Liens en bleu foncé */
+}
+
+/* SECTION INFOS */
+.photo {
+    text-align: center;
+
+}
+
+.photo img {
+    width: 150px;
+    height: 150px;
+    border: 3px solid #fff;
+    box-shadow: 0px 0px 10px #777;
+    border-radius: 20%;
+    margin-top: -90px;
+    transition: transform 0.4s ease;
+}
+.photo img:hover{
+    transform: scale(1.3);
+
+    cursor: pointer;
+}
+
+.prez {
+    border-bottom: 2px dashed #ccc;
+}
+
+.prez a {
+    display: block;
+    text-align: center;
+    padding: 10px;
+    margin: 25px auto 30px auto;
+    color: #ffa424; /* Couleur des liens dans la section "Qui suis-je ?" */
+    background-color: #0056b3; /* Fond bleu */
+    box-shadow: 0px 0px 10px #3d3a3a;
+    border-radius: 5px;
+}
+
+.contact-flex {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    padding: 6px;
+}
+
+
+
+.contact-flex p:first-child {
+    flex: 0 0 40%;
+}
+
+.contact-flex p:last-child {
+    flex: 0 0 60%;
+}
+
+.social {
+    display: flex;
+    justify-content: space-around;
+    margin: 10px auto 0;
+}
+
+.social img {
+    width: 40px;
+    height: 40px;
+}
+
+/* SECTION EXP ET FORMATION */
+.exp {
+    display: flex;
+    flex-flow: row wrap;
+    border-bottom: 1px solid #bbb;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+
+}
+
+.exp-info {
+    display: flex;
+    flex-flow: column wrap;
+    /* justify-content: space-evenly; */
+    gap: 10px;
+}
+
+.exp-logo {
+    flex: 0 0 25%;
+    max-width: 100px;
+    margin: 0 auto;
+}
+
+.exp-info {
+    flex: 0 0 70%;
+    margin-left: auto;
+}
+
+.exp img {
+    width: 100%;
+}
+
+.exp h3 {
+    font-size: 1.2em;
+}
+
+.exp h4 {
+    font-size: 1em;
+    font-weight: normal;
+}
+
+/* SECTION COMPETENCES */
+.comp {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    padding: 15px;
+
+}
+
+.comp p {
+    flex: 0 0 50%;
+    transition: transform 0.4s ease;
+
+    text-align: left;
+    
+
+
+}
+.comp :hover {
+    color: rgb(202, 122, 11);
+    transform: scale(1.2);
+    transform: translateX(-30px);
+    
+    cursor: pointer;
+}
+
+/* SECTION INTERETS */
+.interet {
+    flex: 0 1 50%;
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.interet img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    box-shadow: 0px 0px 15px #555;
+    transition: transform 0.4s ease;
+}
+
+.interet:hover img{
+    transform: scale(1.5);
+
+    cursor: grab;
+}
+
+/* ---------position */
+.center{
+    display: flex;
+    text-align: center();
+    align-items: center();
+    justify-content: center;
+}
+
+/* VERSION BUREAU DU CV */
+@media screen and (min-width: 980px) {
+    section {
+        width: 80%;
+        box-shadow: 0px 0px 10px #bbb;
+    }
+
+    a:hover {
+        color: #EA0;
+    }
+
+    header h1 {
+        width: 80%;
+    }
+
+    .prez, .contact {
+        flex: 0 0 45%;
+    }
+
+    .prez {
+        border-bottom: none;
+        border-right: 2px solid #ccc;
+        padding-right: 20px;
+        margin-left: auto;
+    }
+
+    .contact {
+        padding-left: 20px;
+        margin-right: auto;
+    }
+
+    .prez a {
+        border: 2px solid transparent;
+    }
+
+    .prez a:hover {
+        color: #f28835;
+        background-color: #fff;
+        border: 2px solid #f28835;
+        box-shadow: 0px 0px 20px #666;
+    }
+
+    .exp-logo {
+        flex: 0 0 10%;
+    }
+
+    .exp-info, .exp-desc {
+        flex: 0 0 85%;
+        margin-left: auto;
+    }
+
+    .interet {
+        flex: 0 1 25%;
+    }
+}
+
+@media screen and (max-width: 780px){
+
+    .photo:hover img{
+        transform: none;
+    }
+
+    header div{
+        margin-right: 1%;
+    }
+
+    
+    header h1{
+        transition: 300ms;
+        font-size: 1.25em;
+        margin: 0;
+
+        justify-content: center;
+
+    }
+
+}
+
+@media screen and (max-width: 400px){
+
+    header h1{
+        font-size: 1.05em;
+    }
+    .comp p {
+        flex: 0 0 50%;
+        transition: transform 0.4s ease;
+    
+        text-align: left
+    }
+}
