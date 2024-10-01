@@ -13,7 +13,7 @@
 </head>
 <body>
     <header>
-    <h1><button  onclick="window.location.href='https://portfolio-devdokidocs-projects.vercel.app/portfolio/';"><i class="fa-solid fa-turn-down fa-fade fa-2xs" style="color: #d68710; transform: rotate(90deg);"></i> Mathieu Argibay</button></h1>
+    <h1 class="title"><button  onclick="window.location.href='https://portfolio-devdokidocs-projects.vercel.app/portfolio/';"></i> Mathieu Argibay</button></h1>
     
     <div>
         <button id="theme-toggle" aria-label="Changer le thème"><i class="fa-solid fa-moon fa-fade"></i></button>
@@ -59,11 +59,13 @@
         </div>
     </section>
     
-    <section  data-aos="fade-right"
-    data-aos-offset="200"
-    data-aos-easing="ease-in-sine">
-        <h2 class="titre">Expériences professionnelles</h2>
-        <div class="exp">
+    <section>
+        <h2 class="titre" data-aos="fade-right"
+        data-aos-offset="200"
+        data-aos-easing="ease-in-sine">Expériences professionnelles</h2>
+        <div class="exp" data-aos="fade-right"
+        data-aos-offset="200"
+        data-aos-easing="ease-in-sine">
             <div class="exp-logo">
                 <a href="#"><img src="./img/soldat.png" alt="Logo Ministère des Armées"></a>
             </div>
@@ -74,7 +76,9 @@
             </div>
 
         </div>
-        <div class="exp">
+        <div class="exp" data-aos="fade-left"
+        data-aos-offset="200"
+        data-aos-easing="ease-in-sine">
             <div class="exp-logo">
                 <a href="#"><img src="./img/pelle.png" alt="Logo Travaux publics"></a>
             </div>
@@ -86,11 +90,13 @@
         </div>
     </section>
     
-    <section  data-aos="fade-right"
-    data-aos-offset="200"
-    data-aos-easing="ease-in-sine">
-        <h2 class="titre">Diplômes et Formations</h2>
-        <div class="exp">
+    <section>
+        <h2 class="titre"   data-aos="fade-right"
+        data-aos-offset="200"
+        data-aos-easing="ease-in-sine">Diplômes et Formations</h2>
+        <div class="exp"   data-aos="fade-right"
+        data-aos-offset="200"
+        data-aos-easing="ease-in-sine">
             <div class="exp-logo">
                 <a href="#"><img src="./img/CMFP.png" alt="Logo EDHEC"></a>
             </div>
@@ -100,7 +106,9 @@
 
             </div>
         </div>
-        <div class="exp">
+        <div class="exp"   data-aos="fade-left"
+        data-aos-offset="200"
+        data-aos-easing="ease-in-sine">
             <div class="exp-logo">
                 <a href="#"><img src="./img/soldat.png" alt="Logo Dumont"></a>
             </div>
@@ -109,16 +117,20 @@
                 <p>Permettant de diriger jusqu’à 10 personnes</p>
             </div>
         </div>
-        <div class="exp">
+        <div class="exp"   data-aos="fade-right"
+        data-aos-offset="200"
+        data-aos-easing="ease-in-sine">
             <div class="exp-logo">
-                <a href="#"><img src="./img/croixrouge.png" alt="Logo PSC1"></a>
+                <a href="#"><img src="./img/croixbleue.png" alt="Logo PSC1"></a>
             </div>
             <div class="exp-info">
                 <h3>PSC1 | 2016 recyclé en 2024</h3>
                 <p>Secourisme</p>
             </div>
         </div>
-        <div class="exp">
+        <div class="exp"   data-aos="fade-left"
+        data-aos-offset="200"
+        data-aos-easing="ease-in-sine">
             <div class="exp-logo">
                 <a href="#"><img src="https://www.pierre-giraud.com/wp-content/uploads/2019/07/dd.png" alt="Logo BEP Travaux publics"></a>
             </div>
@@ -130,40 +142,56 @@
         </div>
     </section>
     
-    <section  data-aos="fade-right"
-    data-aos-offset="200"
-    data-aos-easing="ease-in-sine">
-        <h2 class="titre">Compétences</h2>
-        <div class="comp">
-            <p>HTML <i class="fa-brands fa-html5"></i></p>
-            <p>CSS <i class="fa-brands fa-css3-alt"></i></p>
+    <section>
+        <h2 class="titre" class=all_comp data-aos="fade-right"
+        data-aos-offset="200"
+        data-aos-easing="ease-in-sine">Compétences</h2>
+        <div class="comp comp1" class=all_comp data-aos="fade-right"
+        data-aos-offset="200"
+        data-aos-easing="ease-in-sine">
+            <p class="html"><i class="fa-brands fa-html5"></i> HTML</p>
+            <p class="css"><i class="fa-brands fa-css3-alt"></i> CSS</p>
         </div>
-        <div class="comp">
-            <p>MySQL <i class="fa-solid fa-database"></i></p>
-            <p>PHP <i class="fa-brands fa-php"></i></p>
+        <div class="comp comp2" class=all_comp data-aos="fade-left"
+        data-aos-offset="200"
+        data-aos-easing="ease-in-sine">
+            <p class="sql"><i class="fa-solid fa-database"></i> MySQL</p>
+            <p class="php"><i class="fa-brands fa-php"></i> PHP</p>
         </div>
-        <div class="comp">
-            <p>Symfony <i class="fa-brands fa-symfony"></i></p>
-            <p>TOSA <i class="fa-solid fa-file-excel"></i> 991/1000</p>
+        <div class="comp comp3" class=all_comp data-aos="fade-right"
+        data-aos-offset="200"
+        data-aos-easing="ease-in-sine">
+            <p class="symfony"><i class="fa-brands fa-symfony"></i> Symfony</p>
+            <p class="tosa"><i class="fa-solid fa-file-excel"></i> TOSA 991/1000</p>
         </div>           
-        <div class="comp">
-            <p>TOEIC <i class="fa-solid fa-language"></i> 22/22</p>
-            <p>Voltaire <i class="fa-solid fa-language"></i> 913/1000</p>
+        <div class="comp comp4" class=all_comp data-aos="fade-left"
+        data-aos-offset="200"
+        data-aos-easing="ease-in-sine">
+            <p class="toeic"><i class="fa-solid fa-language"></i> TOEIC 22/22</p>
+            <p class="voltaire"><i class="fa-solid fa-language"> </i> Voltaire 913/1000</p>
+
         </div>
     </section>
     
-    <section  data-aos="fade-right"
-    data-aos-duration="200">
-        <h2 class="titre">Centres d'intérêt</h2>
-        <figure class="interet">
+    <section>
+        <h2 class="titre" class=all_comp data-aos="fade-right"
+        data-aos-offset="200"
+        data-aos-easing="ease-in-sine">Centres d'intérêt</h2>
+        <figure class="interet" class=all_comp data-aos="fade-right"
+        data-aos-offset="200"
+        data-aos-easing="ease-in-sine">
             <img src="./img/perdu-randonnee-reflexes.jpg" alt="Randonnée">
             <figcaption>Randonnée</figcaption>
         </figure>
-        <figure class="interet">
+        <figure class="interet" class=all_comp data-aos="fade-up"
+        data-aos-offset="200"
+        data-aos-easing="ease-in-sine">
             <img src="./img/run.jpg" alt="Course à pied">
             <figcaption>Course à pied</figcaption>
         </figure>
-        <figure class="interet">
+        <figure class="interet" class=all_comp data-aos="fade-left"
+        data-aos-offset="200"
+        data-aos-easing="ease-in-sine">
             <img src="./img/guitare.jpg" alt="Guitare">
             <figcaption>Guitare</figcaption>
         </figure>
