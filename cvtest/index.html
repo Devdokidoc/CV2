@@ -3,206 +3,85 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="keywords" content="">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>CV de Mathieu Argibay</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <title>Portfolio de Mathieu Argibay</title>
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+
     <script src="script.js" defer ></script>
 </head>
 <body>
+
     <header>
-    <h1 class="title"><button  onclick="window.location.href='https://portfolio-devdokidocs-projects.vercel.app/portfolio/';"></i> Mathieu Argibay</button></h1>
-    
-    <div>
-        <button id="theme-toggle" aria-label="Changer le thème"><i class="fa-solid fa-moon fa-fade"></i></button>
+        <nav>
+            <ul>
+                <li><a href="#about">À propos</a></li>
+                <li><a href="#projects">Projets</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="https://cvma-one.vercel.app/cvtest/">Mon CV</a></li>
+            </ul>
+        </nav>
+        <div class="intro">
+            <a href="https://portfolio-devdokidocs-projects.vercel.app/portfolio/"><h1 class="typewriter">Mathieu Argibay</h1></a>
+            <p class="slide-in">Développeur Web</p>
+            <a href="#projects" class="cta-button">Voir mes Projets</a>
         </div>
     </header>
-    
-    <section>
-        <div class="photo">
-            <img src="./img/photoCVtest2.JPG" alt="Ma photo de profil">
-        </div>
-        <div class="prez"  data-aos="fade-right"
-        data-aos-offset="200"
-        data-aos-easing="ease-in-sine">
-            <h2 class="titre">Qui suis-je ?</h2>
-            <p>Ancien militaire pendant 9 ans, j’ai développé une grande <b>capacité d’adaptation. Rigueur, discipline, réactivité, professionnalisme, esprit d’équipe</b> sont les qualités que j’ai acquises durant ces années dans l’armée de terre.<br>
-            Mon désir d’apprendre est sans limite et je saurai mettre à profit mes compétences actuelles et futures dans votre entreprise.</p>
-            <a href="https://smallpdf.com/fr/file#s=32e6df80-182d-44ff-9a08-95b8aac562c1" target="_blank" download>Télécharger mon CV</a>
-        </div>
-        <div class="contact" data-aos="fade-left"
-        data-aos-offset="200"
-        data-aos-easing="ease-in-sine">
-            <h2 class="titre">Informations de contact</h2>
-            <div class="contact-flex">
-                <p>Nom :</p>
-                <p>Argibay Mathieu</p>
-            </div>
-            <div class="contact-flex">
-                <p>Adresse :</p>
-                <p>Saint-Claud 16450</p>
-            </div>
-            <div class="contact-flex">
-                <p>Téléphone :</p>
-                <p>06 43 03 19 62</p>
-            </div>
-            <div class="contact-flex">
-                <p>Mail :</p>
-                <p><a href="mailto:argibay.mathieu@gmail.com">argibay.mathieu@gmail.com</a></p>
-            </div>
-            <div class="contact-flex">
-                <p>Permis :</p>
-                <p>B C CE</p>
-            </div>
-        </div>
-    </section>
-    
-    <section>
-        <h2 class="titre" data-aos="fade-right"
-        data-aos-offset="200"
-        data-aos-easing="ease-in-sine">Expériences professionnelles</h2>
-        <div class="exp" data-aos="fade-right"
-        data-aos-offset="200"
-        data-aos-easing="ease-in-sine">
-            <div class="exp-logo">
-                <a href="#"><img src="./img/soldat.png" alt="Logo Ministère des Armées"></a>
-            </div>
-            <div class="exp-info">
-                <h3>Ministère des Armées | 2015-2024</h3>
-                <h4>Brie (16)</h4>
-                <p>Magasinier Gestion de matériel et de véhicules | Organisation et préparation de mission de transport super poids lourd en tant que chef de groupe | Formation et encadrement des nouveaux engagés.</p>
-            </div>
 
-        </div>
-        <div class="exp" data-aos="fade-left"
-        data-aos-offset="200"
-        data-aos-easing="ease-in-sine">
-            <div class="exp-logo">
-                <a href="#"><img src="./img/pelle.png" alt="Logo Travaux publics"></a>
-            </div>
-            <div class="exp-info">
-                <h3>Travaux publics | 2014-2015</h3>
-                <h4>Egletons(19)</h4>
-                <p>Application des savoir-faire | Travail en autonomie | Prise d’initiative</p>
-            </div>
-        </div>
+    <section id="about" class="section about " >
+        <h2>À propos de moi</h2>
+        <p>
+            <span>Ancien militaire, j'ai su transformer discipline et rigueur en atouts pour relever des défis techniques et créatifs en tant que développeur.</span>
+            <span>Passionné par les interfaces innovantes, je conçois des expériences visuelles uniques, combinant esthétisme et fluidité.</span>
+            <span>Détail et adaptabilité sont au cœur de mes créations, toujours pensées pour être à la fois fonctionnelles et captivantes.</span>
+            <span>Curieux et motivé, je mets mon expertise au service de chaque projet pour offrir des solutions sur mesure.</span>
+        </p>
     </section>
-    
-    <section>
-        <h2 class="titre"   data-aos="fade-right"
-        data-aos-offset="200"
-        data-aos-easing="ease-in-sine">Diplômes et Formations</h2>
-        <div class="exp"   data-aos="fade-right"
-        data-aos-offset="200"
-        data-aos-easing="ease-in-sine">
-            <div class="exp-logo">
-                <a href="#"><img src="./img/CMFP.png" alt="Logo EDHEC"></a>
-            </div>
-            <div class="exp-info">
-                <h3>Développeur Web Niveau 5 | 2024-2025 (En cours)</h3>
-                <p>Centre militaire de formation professionnelle (CMFP/AFPA)</p>
 
+    <section id="projects" class="section projects">
+        <h2 class="h2_projet">Mes Projets</h2>
+        <div class="project-grid">
+            <div class="project case1"  data-aos="zoom-out-right">
+                <img src="./img/Gestionnaire_commerce2.png" alt="Projet 1">
+                <h3>Application web de gestion commerciale</h3>
+                <p>Une application web avec des fonctionnalités de base de données</p>
             </div>
-        </div>
-        <div class="exp"   data-aos="fade-left"
-        data-aos-offset="200"
-        data-aos-easing="ease-in-sine">
-            <div class="exp-logo">
-                <a href="#"><img src="./img/soldat.png" alt="Logo Dumont"></a>
+            <div class="project case2" data-aos="zoom-out-up">
+                <!-- <img src="project2.jpg" alt="Projet 2"> -->
+                <h3>A venir</h3>
+                <p>Un site de portfolio interactif avec des transitions dynamiques.</p>
             </div>
-            <div class="exp-info">
-                <h3>Certificat de qualifications technique supérieur | 2021</h3>
-                <p>Permettant de diriger jusqu’à 10 personnes</p>
-            </div>
-        </div>
-        <div class="exp"   data-aos="fade-right"
-        data-aos-offset="200"
-        data-aos-easing="ease-in-sine">
-            <div class="exp-logo">
-                <a href="#"><img src="./img/croixbleue.png" alt="Logo PSC1"></a>
-            </div>
-            <div class="exp-info">
-                <h3>PSC1 | 2016 recyclé en 2024</h3>
-                <p>Secourisme</p>
-            </div>
-        </div>
-        <div class="exp"   data-aos="fade-left"
-        data-aos-offset="200"
-        data-aos-easing="ease-in-sine">
-            <div class="exp-logo">
-                <a href="#"><img src="https://www.pierre-giraud.com/wp-content/uploads/2019/07/dd.png" alt="Logo BEP Travaux publics"></a>
-            </div>
-            <div class="exp-info">
-                <h3>BEP Travaux publics | 2012 – 2014</h3>
-                <h4>Lycée Pierre Caraminot</h4>
-                <p>Acquisition des savoirs faire technique des travaux publics</p>
+            <div class="project case3" data-aos="zoom-out-left">
+                <img src="./img/fleurs.png" alt="Projet 3">
+                <h3>Boutique en ligne</h3>
+                <p>Design d'une boutique en ligne avec une interface utilisateur innovante.</p>
             </div>
         </div>
     </section>
-    
-    <section>
-        <h2 class="titre" class=all_comp data-aos="fade-right"
-        data-aos-offset="200"
-        data-aos-easing="ease-in-sine">Compétences</h2>
-        <div class="comp comp1" class=all_comp data-aos="fade-right"
-        data-aos-offset="200"
-        data-aos-easing="ease-in-sine">
-            <p class="html"><i class="fa-brands fa-html5"></i> HTML</p>
-            <p class="css"><i class="fa-brands fa-css3-alt"></i> CSS</p>
-        </div>
-        <div class="comp comp2" class=all_comp data-aos="fade-left"
-        data-aos-offset="200"
-        data-aos-easing="ease-in-sine">
-            <p class="sql"><i class="fa-solid fa-database"></i> MySQL</p>
-            <p class="php"><i class="fa-brands fa-php"></i> PHP</p>
-        </div>
-        <div class="comp comp3" class=all_comp data-aos="fade-right"
-        data-aos-offset="200"
-        data-aos-easing="ease-in-sine">
-            <p class="symfony"><i class="fa-brands fa-symfony"></i> Symfony</p>
-            <p class="tosa"><i class="fa-solid fa-file-excel"></i> TOSA 991/1000</p>
-        </div>           
-        <div class="comp comp4" class=all_comp data-aos="fade-left"
-        data-aos-offset="200"
-        data-aos-easing="ease-in-sine">
-            <p class="toeic"><i class="fa-solid fa-language"></i> TOEIC 22/22</p>
-            <p class="voltaire"><i class="fa-solid fa-language"> </i> Voltaire 913/1000</p>
 
-        </div>
+    <section id="contact" class="section contact" >
+        <h2>Contactez-moi</h2>
+        <form id="contact-form">
+            <input type="text" name="name" placeholder="Votre nom" required>
+            <input type="email" name="email" placeholder="Votre email" required>
+            <textarea name="message" placeholder="Votre message" rows="6" required></textarea>
+            <button type="submit">Envoyer</button>
+        </form>
+        <p id="form-message"></p>
     </section>
-    
-    <section>
-        <h2 class="titre" class=all_comp data-aos="fade-right"
-        data-aos-offset="200"
-        data-aos-easing="ease-in-sine">Centres d'intérêt</h2>
-        <figure class="interet" class=all_comp data-aos="fade-right"
-        data-aos-offset="200"
-        data-aos-easing="ease-in-sine">
-            <img src="./img/perdu-randonnee-reflexes.jpg" alt="Randonnée">
-            <figcaption>Randonnée</figcaption>
-        </figure>
-        <figure class="interet" class=all_comp data-aos="fade-up"
-        data-aos-offset="200"
-        data-aos-easing="ease-in-sine">
-            <img src="./img/run.jpg" alt="Course à pied">
-            <figcaption>Course à pied</figcaption>
-        </figure>
-        <figure class="interet" class=all_comp data-aos="fade-left"
-        data-aos-offset="200"
-        data-aos-easing="ease-in-sine">
-            <img src="./img/guitare.jpg" alt="Guitare">
-            <figcaption>Guitare</figcaption>
-        </figure>
-    </section>
-    
-    <footer class="center">
-        <p>CopyRight &copy; Mathieu Argibay 2024</p>
+
+    <footer>
+        <p>2024 &copy; Mathieu Argibay - Tous droits réservés</p>
     </footer>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@2.4.1/dist/email.min.js"></script>
     <script>
         AOS.init();
-      </script>
+    </script>
 </body>
 </html>
