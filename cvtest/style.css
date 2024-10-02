@@ -585,6 +585,8 @@ body.light-mode a {
     }
 
 }
+
+
 @media screen and (max-width: 500px){
     .comp p{
         padding-left:0px;
@@ -635,4 +637,8 @@ body.light-mode a {
     
         text-align: left
     }
+}
+
+@media screen and (max-height : 500px){
+
 }
