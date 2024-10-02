@@ -1,464 +1,648 @@
-/* Styles de base */
+/* STYLES GENERAUX */
 * {
-    margin: 0;
+    font-family: "Montserrat", sans-serif; 
     padding: 0;
+    margin: 0;
+    text-align: justify;
     box-sizing: border-box;
 }
 
+html{
+    overflow-x: hidden;
+}
 body {
-    font-family: 'Montserrat', sans-serif;
-    background-color: #f4f4f4;
-    color: #333;
+    background: #f1f1f1; /* Couleur de fond du thème clair par défaut */
+    color: #333; /* Couleur du texte par défaut */
     overflow-x: hidden;
-}
-html {
-    overflow-x: hidden;
-    scroll-behavior: smooth;
-}
-/* Nav Bar */
-nav {
-    background-color: #3e1f5c; /* Violet Foncé */
-    color: #fff;
-    padding: 15px 30px;
-    position: fixed; /* Fixe la barre de navigation en haut */
-    top: 0;
-    width: 100%;
-    z-index: 1000; /* Pour s'assurer que la barre de nav reste au-dessus du contenu */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ombre portée légère */
 }
 
-nav ul {
-    list-style: none;
+p {
+    font-size: 1em;
+    line-height: 1.5em;
+}
+
+a {
+    text-decoration: none;
+    color: #333; /* Couleur des liens par défaut */
+}
+
+/* BOUTON DE CHANGEMENT DE THÈME */
+header #theme-toggle {
+    background-color: rgb(59, 58, 58); /* Bleu foncé pour le bouton */
+    color: #fff; /* Texte blanc pour le bouton */
+    border: none;
+    padding: px;
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    cursor: pointer;
+    justify-content: center;
+    align-items: center;
+    font-size: 1em;    transition: background-color 0.3s, color 0.3s;
+
+
+}
+/* Style de base pour le bouton toggle */
+#theme-toggle {
     display: flex;
     justify-content: center;
-    gap: 30px;
+    align-items: center;
+    border: none;
+    outline: none;
+    width: 50px;
+    height: 50px;
+    padding: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background 0.3s ease, box-shadow 0.3s ease, transform 0.1s ease;
 }
 
-nav ul li {
-    display: inline;
-    white-space: nowrap;
+/* Effet de clic : légère pression avec ombre */
+#theme-toggle:active {
+    transform: scale(0.95);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
 }
 
-nav ul li a {
-    color: white;
-    text-decoration: none;
-    font-weight: 500;
-    font-size: 18px;
+/* Ombre légère pour un effet de relief constant */
+#theme-toggle {
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.15);
+}
+
+/* Icône dans le bouton toggle */
+#theme-toggle i {
+    font-size: 20px;
     transition: color 0.3s ease;
 }
 
-nav ul li a:hover {
-    color: #f5a623; /* Or pour le survol */
-    text-decoration: underline;
+/* Icône en mode clair */
+body.light-mode #theme-toggle i {
+    color: #333; /* Couleur plus foncée pour meilleure visibilité */
 }
 
-/* En-tête */
-header {
-    height: 100vh;
-    background: linear-gradient(135deg, #3e1f5c, #6d28d9); /* Dégradé de Violet Foncé à Violet Clair */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    color: white;
-    position: relative;
-    margin-top: 0; /* Assure qu'il n'y a pas d'espace entre la nav et le header */
+/* Icône en mode sombre */
+body.dark-mode #theme-toggle i {
+    color: #f1f1f1; /* Couleur plus claire pour contraster */
 }
 
-/* Section d'introduction */
-.intro {
-    animation: fadeIn 1.5s ease-out;
-    max-width: 100%;
-    margin: auto;
+
+header div button {
+        text-align: center;
+
+}
+
+header #theme-toggle:hover {
+    background-color: #f39c12; /* gold pour le survol */
+}
+
+header #theme-toggle:active {
+
+}
+
+/* HEADER & FOOTER */
+header, footer {
     width: 100%;
-    /* background: rgba(62, 31, 92, 0.5); Fond semi-transparent pour contraste */
-    padding: 20px;
-    border-radius: 8px;
-
-}
-@keyframes slideIn {
-    0% {
-        left: -100%;
-        opacity: 0;
-    }
-    100% {
-        left: 0;
-        opacity: 1;
-    }
-}
-.slide-in {
-    animation: slideIn 2s ease-out forwards;
-}
-/* .glitch {
-    font-size: 3em;
-    position: relative;
-    color: rgb(82, 3, 94);
-    animation: glitch 2s infinite;
+    padding: 15px 0;
+    background-color: #0056b3; /* Couleur de fond du header et footer */
+    color: #fff; /* Couleur du texte du header et footer */
+    box-shadow: 0px 0px 15px #333;
 }
 
-@keyframes glitch {
-    0% {
-        text-shadow: 2px 2px rgb(189, 8, 235);
-    }
-    50% {
-        text-shadow: -2px -2px rgb(10, 10, 28);
-    }
-    100% {
-        text-shadow: 2px 2px rgb(58, 6, 79);
-    }
+header {
+    border-bottom: 2px solid #fff;
+    height: 130px;
+    display: flex;
+}
+h1 button {
+    --s: 0.1em;   /* the thickness of the line */
+    --c: #c937fa; /* the color */
+    
+    color: #ffffff00;
+    padding-bottom: var(--s);
+    background: 
+      linear-gradient(90deg,var(--c) 50%,#ffffff 0) calc(100% - var(--_p,0%))/200% 100%,
+      linear-gradient(var(--c) 0 0) 0% 100%/var(--_p,0%) var(--s) no-repeat;
+    -webkit-background-clip: text,padding-box;
+            background-clip: text,padding-box;
+    transition: 0.5s;
+    border: none;
+    /* margin-left: 150px; */
+  }
+  h1 button:hover {--_p: 100%}
+
+  h1 button {
+    font-family: "Roboto Mono", monospace;
+    font-size: 1.7rem;
+    cursor: pointer;
+  }
+  
+
+
+ header h1 {
+    display: flex;
+    /* font-size: 1.5em; */
+    width: 100%;
+    height: 50%;
+    /* padding-left: 3%; */
+    margin-left: 10%;
+
+    /* color: white; */
+
+}
+/* header h1 button{
+    background: none;
+    color: white;
+    border: none;
+    font-size: 1.3em;
+    transition: transform 0.4s ease;
+    
+}
+
+header h1 :hover{
+    color:rgb(202, 122, 11);
+    cursor: pointer;
+    transform: scale(1.05) translatex(-25px);
 } */
 
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-/* DEMO-SPECIFIC STYLES */
-.typewriter {
-    color: #fff;
-    font-family: monospace;
-    display: inline-block; /* S'assurer que l'élément occupe juste la largeur de son contenu */
-    overflow: hidden; /* Cacher le texte au début */
-    border-right: .15em solid rgb(97, 2, 108); /* Curseur */
-    white-space: nowrap; /* Forcer tout le texte sur une ligne */
-    letter-spacing: .15em; /* Espacement des lettres */
-    animation: typing 2.5s steps(30, end), blink-caret .5s step-end infinite;
-}
-
-/* Animation pour la saisie du texte */
-@keyframes typing {
-    from { width: 0; }
-    to { width: 20ch; } /* On anime jusqu'à 100% de la longueur du texte */
-}
-
-/* Animation pour le clignotement du curseur */
-@keyframes blink-caret {
-    from, to { border-color: transparent; }
-    50% { border-color: rgb(153, 62, 238); }
-}
-h1 {
-    /* position: relative; */
-    /* left: -100%; */
-    /* opacity: 0; */
-    font-size: 4rem;
-    font-family: monospace;
-    margin-bottom: 5rem;
-    color: white;
-    text-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* Ombre portée légère pour effet de brillance */
-    transition: transform 0.4s ease, color 0.4s ease;
-}
-header p{
-    position:relative;
-    left: -100%;
-    opacity: 0;
-    margin-bottom: 5rem;
-    font-size: 2em;
-}
-
-
-h1:hover{
-    transform: scale(1.05);
-
-    color: #f5a623;
+/* button:hover{
+    color:#f39c12;
     cursor: pointer;
-    text-shadow: #333 5px 5px 5px;
-     /* Légère augmentation de la taille */}
+    transform: scale(1.1);
+    transition: 200ms;
 
-p {
-    font-size: 1.5rem;
-    line-height: 1.6;
-}
-
-.cta-button {
-    background-color: #3e1f5c; /* Violet Foncé */
-    color: white;
-    padding: 15px 30px;
-    border-radius: 50px;
-    text-decoration: none;
-    font-size: 1.2rem;
-    margin-top: 20px;
-    display: inline-block;
-    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Ombre portée */
-}
-
-.cta-button:hover {
-    background-color: #f5a623; /* Or */
-    transform: scale(1.05); /* Légère augmentation de la taille */
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Ombre portée plus intense */
-}
-
-/* Sections */
-.section {
-    padding: 100px 0;
-    text-align: center;
-    margin-top: 0; /* Assure qu'il n'y a pas d'espace entre la nav et les sections */
-    transition: opacity 0.5s ease, transform 0.5s ease;
-    opacity: 0;
-    transform: translateY(30px);
-}
-
-.section-visible {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-/* About Section */
-#about {
-    background-color: #b39ddb; /* Violet Clair */
-    padding: 80px 0;
-}
-
-#about p {
-    max-width: 80%;
-    margin: 0 auto;
-    font-size: 1.2rem;
-    line-height: 1.6;
-    color: #333;
-}
-
-#about p span:not(:last-child):after {
-    content: "";
-    display: block;
-    width: 80px; /* Longueur de la ligne */
-    height: 2px; /* Épaisseur de la ligne */
-    margin: 20px auto; /* Centrer avec un espace vertical */
-    background-color: #6d28d9; /* Couleur violet clair */
-    transition: width 0.4s ease, background-color 0.4s ease; /* Transition douce pour l'effet */
-}
-
-#about p span:hover:after {
-    width: 120px; /* Agrandir la ligne au survol */
-    background-color: #3e1f5c; /* Changer la couleur au survol */
-}
+} */
 
 
-
-#about h2 {
-    color: #333;
-    font-size: 2.2rem;
-    opacity: 1;
-    transition: color 0.5s ease, transform 0.5s ease;
-    padding-bottom: 30px;
-}
-
-#about:hover h2 {
-    /* animation: aboutme 1s forwards; */
-    color: #6d28d9;
-    transform:scale(1.2) translateY(-20px);
-
-}
-
-    
-
-/* Project Section */
-.h2_projet{
-    margin-bottom: 60px;
-    font-size: 2em;
-}
-.projects {
-    background-color: #f4f4f4; /* Fond neutre pour les projets */
-    padding: 80px 0;
-}
-
-.project-grid {
-    display: grid;
-    grid-template-areas: 'case1 case2 case3';
-    gap: 30px;
-    margin: 0 50px;
-}
-.case1{grid-area: case1;}
-.case2{grid-area: case2;}
-.case3{grid-area: case3;}
-
-.project {
-    border-radius: 8px;
-    background-color: #b39ddb;
-    overflow: hidden;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ombre portée */
-    transition: box-shadow 0.3s ease, transform 0.3s ease;
-}
-.project h3{
-    padding-top: 15px;
-}
-
-.project:hover h3{
-color: #6d28d9;
-transition: 200ms; 
-}
-
-.project img {
-    width: 100%;
-    display: block;
-    transition: transform 0.3s ease;
-    
-}
-
-.project:hover {
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Ombre portée plus intense au survol */
-    transform: translateY(-5px); /* Légère élévation */
-}
-
-.project:hover img {
-    transform: scale(1.05); /* Agrandissement de l'image au survol */
-}
-
-/* Formulaire de contact */
-.contact {
-    background-color: #b39ddb; /* Violet Clair */
-    padding: 80px 0;
-}
-.contact h2{
-    padding-bottom:60px;
-}
-
-form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    max-width: 600px;
-    margin: 0 auto;
-    padding: 20px;
-    background-color: #ffffff;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-input, textarea {
-    width: 100%;
-    padding: 15px;
-    margin-bottom: 15px;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    font-size: 1rem;
-    transition: border-color 0.3s ease;
-    resize: none;
-}
-
-input:focus, textarea:focus {
-    border-color: #3e1f5c; /* Bordure Violet Foncé au focus */
-}
-
-button {
-    background-color: #3e1f5c; /* Violet Foncé */
-    color: white;
-    padding: 15px 30px;
-    border: none;
-    border-radius: 50px;
-    cursor: pointer;
-    font-size: 1.2rem;
-    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Ombre portée */
-}
-
-button:hover {
-    background-color: #f5a623; /* Or */
-    transform: scale(1.05); /* Augmentation de la taille au hover */
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Ombre portée plus intense */
-}
-
-/* Footer */
 footer {
+    border-top: 2px solid #fff;
     text-align: center;
-    padding: 20px 0;
-    background-color: #3e1f5c; /* Violet Foncé */
-    color: white;
 }
 
-/* Fixer la barre de navigation */
-body {
-    padding-top: 0; /* Assure qu'il n'y a pas d'espace entre la nav et le header */
+/* SECTIONS */
+section {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    width: 100%;
+    padding-bottom: 20px;
+    margin: 20px auto;
+    box-shadow: 5px 5px 5px  #f5f4f4;
+    background-color: #fff; /* Couleur de fond par défaut des sections */
+    border-radius: 5px;
 }
 
-@media (max-width:750px) {
+
+
+section h2 {
+    margin: 15px 0;
+    width: 90%;
+}
+
+section > div {
+    width: 90%;
+}
+
+/* THÈME SOMBRE */
+body.dark-mode {
+    background-color: #2d2d2d; /* Fond sombre */
+    color: #f1f1f1; /* Texte clair */
+}
+
+body.dark-mode header, 
+body.dark-mode footer {
+    background-color: #1c1c1c; /* Fond du header et footer sombre */
+    color: #f1f1f1; /* Texte clair */
+}
+
+body.dark-mode section {
+    background-color: #333; /* Fond sombre des sections */
+    color: #f1f1f1; /* Texte clair des sections */
+}
+
+body.dark-mode .titre {
+    color: #d3a0ff; /* Violet clair */
+}
+
+body.dark-mode a {
+    color: #32055a; /* Liens en violet clair */
+}
+
+/* THÈME CLAIR */
+body.light-mode {
+    background-color: #f1f1f1; /* Fond clair */
+    color: #333; /* Texte sombre */
+}
+
+body.light-mode header, 
+body.light-mode footer {
+    background-color: #0056b3; /* Fond du header et footer bleu */
+    color: #fff; /* Texte blanc */
+}
+
+body.light-mode section {
+    background-color: #e0e0e0; /* Fond des sections en gris clair */
+    color: #333; /* Texte sombre des sections */
+}
+
+body.light-mode .titre {
+    color: #003d80; /* Bleu foncé */
+}
+
+body.light-mode a {
+    color: #003d80; /* Liens en bleu foncé */
+}
+
+/* SECTION INFOS */
+.photo {
+    text-align: center;
+    z-index: 1;
+
+}
+
+.photo img {
+    width: 150px;
+    height: 150px;
+    border: 3px solid #fff;
+    box-shadow: 0px 0px 10px #777;
+    border-radius: 20%;
+    margin-top: -80px;
+    transition: transform 0.4s ease;
+
+}
+.photo img:hover{
+    transform: scale(1.2);
+
+    cursor: pointer;
+}
+
+.prez {
+    border-bottom: 2px dashed #ccc;
+}
+
+.prez a {
+    display: block;
+    text-align: center;
+    padding: 10px;
+    margin: 25px 20% 30px 20%;
+    color: #ffa424; /* Couleur des liens dans la section "Qui suis-je ?" */
+    background-color: #0056b3; /* Fond bleu */
+    box-shadow: 0px 0px 10px #3d3a3a;
+    border-radius: 5px;
+}
+
+.contact-flex {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    padding: 6px;
+}
+
+
+
+.contact-flex p:first-child {
+    flex: 0 0 30%;
+}
+
+.contact-flex p:last-child {
+    flex: 0 0 40%;
+
+}
+
+.social {
+    display: flex;
+    justify-content: space-around;
+    margin: 10px auto 0;
+}
+
+.social img {
+    width: 40px;
+    height: 40px;
+}
+
+/* SECTION EXP ET FORMATION */
+.exp {
+    display: flex;
+    flex-flow: row wrap;
+    border-bottom: 1px solid #bbb;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+
+}
+
+.exp-info {
+    display: flex;
+    flex-flow: column wrap;
+    /* justify-content: space-evenly; */
+    gap: 10px;
+}
+
+.exp-logo {
+    flex: 0 0 25%;
+    max-width: 100px;
+    margin: 0 auto;
+}
+
+.exp-info {
+    flex: 0 0 70%;
+    margin-left: auto;
+}
+
+.exp img {
+    width: 100%;
+}
+
+.exp h3 {
+    font-size: 1.2em;
+}
+
+.exp h4 {
+    font-size: 1em;
+    font-weight: normal;
+}
+
+/* SECTION COMPETENCES */
+.comp {
+
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    padding: 15px;
+}
+
+.comp p {
+    font-family: "Source Code Pro", monospace;
+    font-size: 1.2em;
+    flex: 0 0 50%;
+    transition: transform 0.4s ease;
+    padding-left: 30px;
+    text-align: left;
+
+}
+.comp i{
+    transition: all 0.4s ease;
+}
+.comp p:hover{
+    cursor: pointer;
+}
+
+.comp1:hover .html i {
+    transform: scale(4) translateX(-5px);
+    color:#e34f26;
+}
+.comp1:hover .css i{
+    transform: scale(4) translateX(-7px);
+    color:#264de4;
+}
+.comp2:hover .sql i {
+    transform: scale(4) translateX(-7px);
+    color:#f29111;
+}
+.comp2:hover .php i {
+    transform: scale(4) translateX(-7px);
+    color:#787cb5;
+}
+.comp3:hover .symfony i{
+    transform: scale(4) translateX(-5px);
+    color:black;
+}
+.comp3:hover .tosa i {
+    transform: scale(4) translateX(-5px);
+    color: #1d6f42;
+}
+.comp4:hover .toeic i{
+    transform: scale(4) translateX(-7px);
+    background: 
+                linear-gradient(135deg, rgba(255, 255, 255, 0.8) 25%, rgba(200, 16, 46, 0.8) 25%, rgba(200, 16, 46, 0.8) 50%, rgba(255, 255, 255, 0.8) 50%, rgba(255, 255, 255, 0.8) 75%, rgba(1, 33, 105, 0.8) 75%), 
+                linear-gradient(45deg, rgba(255, 255, 255, 0.8) 25%, rgba(200, 16, 46, 0.8) 25%, rgba(200, 16, 46, 0.8) 50%, rgba(255, 255, 255, 0.8) 50%, rgba(255, 255, 255, 0.8) 75%, rgba(1, 33, 105, 0.8) 75%);
+                -webkit-background-clip: text; 
+                color: transparent;
+}
+.comp4:hover .voltaire i {
+    transform: scale(4) translateX(-7px);
+    background: linear-gradient(90deg, rgba(0, 85, 164, 0.8) 33%, rgba(255, 255, 255, 0.8) 33%, rgba(255, 255, 255, 0.8) 66%, rgba(239, 65, 53, 0.8) 66%); -webkit-background-clip: text; color: transparent;
+}
+
+
+
+/* 
+.comp .sql:hover:hover i{
+    transform: scale(4) translateX(-5px);
+    color: orange;
+}
+.comp .css:hover:hover i{
+    transform: scale(4) translateX(-5px);
+    color: orange;
+}
+.comp .php:hover:hover i{
+    transform: scale(4) translateX(-7px);
+    color: orange;
+}
+.comp .symfony:hover:hover i{
+    transform: scale(4) translateX(-6px);
+    color: orange;
+}
+.comp .tosa:hover:hover i{
+    transform: scale(4) translateX(-5px);
+    color: orange;
+}
+.comp .toeic:hover:hover i{
+    transform: scale(4) translateX(-7px);
+    color: orange;
+}
+.comp .voltaire:hover:hover i{
+    transform: scale(4) translateX(-7px);
+    color: orange;
+} */
+
+/* .all_comp:hover .css>i{
+    transform: scale(4) translateX(-7px);
+    color: orange;
+
+}
+.all_comp:hover .html>i{
+    transform: scale(4) translateX(-7px);
+    color: orange;
+
+} */
+
+
+
+
+
+
+/* .comp p:hover {
+    color: rgb(202, 122, 11);
+    transform: scale(1.2);
+    transform: translateX(-30px);
+    cursor: pointer;
+} */
+
+/* SECTION INTERETS */
+.interet {
+    flex: 0 1 50%;
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.interet img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    box-shadow: 0px 0px 15px #555;
+    transition: transform 0.4s ease;
+}
+
+.interet:hover img{
+    transform: scale(1.5);
+
+    cursor: grab;
+}
+
+/* ---------position */
+.center{
+    display: flex;
+    text-align: center();
+    align-items: center();
+    justify-content: center;
+}
+
+/* VERSION BUREAU DU CV */
+@media screen and (min-width: 980px) {
+    section {
+        width: 80%;
+        box-shadow: 0px 0px 10px #bbb;
+    }
+
+    a:hover {
+        color: #EA0;
+    }
+
+    header h1 {
+        width: 80%;
+    }
+
+    .prez, .contact {
+        flex: 0 0 45%;
+    }
+
+    .prez {
+        border-bottom: none;
+        border-right: 2px solid #ccc;
+        padding-right: 20px;
+        margin-left: auto;
+    }
+
+    .contact {
+        padding-left: 20px;
+        margin-right: auto;
+    }
+
+    .prez a {
+        border: 2px solid transparent;
+    }
+
+    .prez a:hover {
+        color: #f28835;
+        background-color: #fff;
+        border: 2px solid #f28835;
+        box-shadow: 0px 0px 20px #666;
+    }
+
+    .exp-logo {
+        flex: 0 0 10%;
+    }
+
+    .exp-info, .exp-desc {
+        flex: 0 0 85%;
+        margin-left: auto;
+    }
+
+    .interet {
+        flex: 0 1 25%;
+    }
+}
+
+@media screen and (max-width: 780px){
+
+    .photo:hover img{
+        transform: none;
+    }
+
+    header div{
+        margin-right: 1%;
+    }
+
     
-     .typewriter {
-        font-size: 2.5rem;
-        letter-spacing: 0.1em;
+    header h1{
+        transition: 300ms;
+        font-size: 1.25em;
+        margin: 0 2%;
+        /* justify-content: center; */
+        ;
+    }
+
+    .comp p:hover{
+        /* padding-left: 20px; */
+
         transition: 200ms;
-      }
-      header p{
-        font-size: 1.5rem;
+    }
+
+}
+
+
+@media screen and (max-width: 500px){
+    .comp p{
+        padding-left:0px;
+
+        font-size: 0.80em;
         transition: 200ms;
-      }
-      .project-grid {
-        margin: 0;
-        grid-template-rows:1fr 1fr 1fr;
-        grid-template-areas: 'case1'
-                            'case2'
-                            'case3';
-        gap: 20px;
-        width: 100%;
+    }
+    .comp p:hover{
+        transition: 200ms;
+    }
+
+    .comp1:hover .html i {
+        transform: scale(1.8) translateX(-3px);
         
     }
-
+    .comp1:hover .css i{
+        transform:  scale(1.8) translateX(-3px);
+    }
+    .comp2:hover .sql i {
+        transform:  scale(1.8) translateX(-3px);
+    }
+    .comp2:hover .php i {
+        transform:  scale(1.8) translateX(-3px);
+    }
+    .comp3:hover .symfony i{
+        transform:  scale(1.8) translateX(-3px);
+    }
+    .comp3:hover .tosa i {
+        transform: scale(1.8) translateX(-3px);
+    }
+    .comp4:hover .toeic i{
+        transform:  scale(1.8) translateX(-4px);
+    }
+    .comp4:hover .voltaire i {
+        transform: scale(1.8) translateX(-4px);
+  
+    }
 }
 
-@media (max-width:629px) {
-    .typewriter {
-        font-size: 2rem;
-        letter-spacing: 0.1em;
-        transition: 200ms;
-      }
-      footer {
-        text-align: center;
-        padding: 20px 10px;
-        background-color: #3e1f5c; /* Violet Foncé */
-        color: white;
+@media screen and (max-width: 400px){
+
+    header h1{
+        font-size: 1.05em;
     }
-    footer p{
-        font-size: 1rem;
-    }
+    .comp p {
+        flex: 0 0 50%;
+        transition: transform 0.4s ease;
     
-
-}
-
-@media (max-width:400px) {
-    nav ul li a{
-        font-size: 0.80rem;
+        text-align: left
     }
-.intro h1{
-    /* white-space: normal; */
-    transition: 200ms;
-    
-}
-footer p{
-    font-size: 0.75rem;
 }
 
-}
-@media (max-width:360px) {
-    .intro h1{
-        font-size: 1.5rem;
-        transition: 200ms;
-    }
-
-    .intro p{
-        font-size: 1rem;
-        transition: 200ms;
-
-    }
-    nav ul {
-        gap: 15px;
-        transition: 200ms;
-    }
-    
-
-}
 @media screen and (max-height : 500px){
-
-    .intro h1{
-        margin-bottom: 1rem;
-        transition: 200ms;
-    }
-    .intro p{
-        transition: 200ms;
-        margin-bottom: 1.5rem;
-    }
 
 }
