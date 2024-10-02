@@ -1,6 +1,6 @@
 /* STYLES GENERAUX */
 * {
-    font-family: Avenir, sans-serif;
+    font-family: "Montserrat", sans-serif; 
     padding: 0;
     margin: 0;
     text-align: justify;
@@ -42,17 +42,48 @@ header #theme-toggle {
 
 
 }
-header div {
-    /* border: solid red 2px; */
-    /* margin-left: 10%; */
+/* Style de base pour le bouton toggle */
+#theme-toggle {
     display: flex;
-    width: 30px;
-    height: 30px;
-    /* margin-top:3%; */
-    margin-right:2%;
-
-
+    justify-content: center;
+    align-items: center;
+    border: none;
+    outline: none;
+    width: 50px;
+    height: 50px;
+    padding: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background 0.3s ease, box-shadow 0.3s ease, transform 0.1s ease;
 }
+
+/* Effet de clic : légère pression avec ombre */
+#theme-toggle:active {
+    transform: scale(0.95);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Ombre légère pour un effet de relief constant */
+#theme-toggle {
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.15);
+}
+
+/* Icône dans le bouton toggle */
+#theme-toggle i {
+    font-size: 20px;
+    transition: color 0.3s ease;
+}
+
+/* Icône en mode clair */
+body.light-mode #theme-toggle i {
+    color: #333; /* Couleur plus foncée pour meilleure visibilité */
+}
+
+/* Icône en mode sombre */
+body.dark-mode #theme-toggle i {
+    color: #f1f1f1; /* Couleur plus claire pour contraster */
+}
+
 
 header div button {
         text-align: center;
@@ -61,6 +92,10 @@ header div button {
 
 header #theme-toggle:hover {
     background-color: #f39c12; /* gold pour le survol */
+}
+
+header #theme-toggle:active {
+
 }
 
 /* HEADER & FOOTER */
@@ -74,22 +109,46 @@ header, footer {
 
 header {
     border-bottom: 2px solid #fff;
-    height: 125px;
+    height: 130px;
     display: flex;
 }
+h1 button {
+    --s: 0.1em;   /* the thickness of the line */
+    --c: #c937fa; /* the color */
+    
+    color: #ffffff00;
+    padding-bottom: var(--s);
+    background: 
+      linear-gradient(90deg,var(--c) 50%,#ffffff 0) calc(100% - var(--_p,0%))/200% 100%,
+      linear-gradient(var(--c) 0 0) 0% 100%/var(--_p,0%) var(--s) no-repeat;
+    -webkit-background-clip: text,padding-box;
+            background-clip: text,padding-box;
+    transition: 0.5s;
+    border: none;
+    /* margin-left: 150px; */
+  }
+  h1 button:hover {--_p: 100%}
 
-header h1 {
+  h1 button {
+    font-family: "Roboto Mono", monospace;
+    font-size: 1.7rem;
+    cursor: pointer;
+  }
+  
+
+
+ header h1 {
     display: flex;
-    font-size: 1.5em;
+    /* font-size: 1.5em; */
     width: 100%;
-    height: 40%;
-    padding-left: 3%;
+    height: 50%;
+    /* padding-left: 3%; */
     margin-left: 10%;
-    color: white;
 
+    /* color: white; */
 
 }
-header h1 button{
+/* header h1 button{
     background: none;
     color: white;
     border: none;
@@ -101,8 +160,8 @@ header h1 button{
 header h1 :hover{
     color:rgb(202, 122, 11);
     cursor: pointer;
-    transform: scale(1.1) translatex(-25px);
-}
+    transform: scale(1.05) translatex(-25px);
+} */
 
 /* button:hover{
     color:#f39c12;
@@ -195,6 +254,7 @@ body.light-mode a {
 /* SECTION INFOS */
 .photo {
     text-align: center;
+    z-index: 1;
 
 }
 
@@ -204,11 +264,12 @@ body.light-mode a {
     border: 3px solid #fff;
     box-shadow: 0px 0px 10px #777;
     border-radius: 20%;
-    margin-top: -90px;
+    margin-top: -80px;
     transition: transform 0.4s ease;
+
 }
 .photo img:hover{
-    transform: scale(1.3);
+    transform: scale(1.2);
 
     cursor: pointer;
 }
@@ -221,7 +282,7 @@ body.light-mode a {
     display: block;
     text-align: center;
     padding: 10px;
-    margin: 25px auto 30px auto;
+    margin: 25px 20% 30px 20%;
     color: #ffa424; /* Couleur des liens dans la section "Qui suis-je ?" */
     background-color: #0056b3; /* Fond bleu */
     box-shadow: 0px 0px 10px #3d3a3a;
@@ -238,11 +299,12 @@ body.light-mode a {
 
 
 .contact-flex p:first-child {
-    flex: 0 0 40%;
+    flex: 0 0 30%;
 }
 
 .contact-flex p:last-child {
-    flex: 0 0 60%;
+    flex: 0 0 40%;
+
 }
 
 .social {
@@ -299,29 +361,120 @@ body.light-mode a {
 
 /* SECTION COMPETENCES */
 .comp {
+
     display: flex;
     flex-flow: row wrap;
     align-items: center;
     padding: 15px;
-
 }
 
 .comp p {
+    font-family: "Source Code Pro", monospace;
+    font-size: 1.2em;
     flex: 0 0 50%;
     transition: transform 0.4s ease;
-
+    padding-left: 30px;
     text-align: left;
-    
-
 
 }
-.comp :hover {
+.comp i{
+    transition: all 0.4s ease;
+}
+.comp p:hover{
+    cursor: pointer;
+}
+
+.comp1:hover .html i {
+    transform: scale(4) translateX(-5px);
+    color:#e34f26;
+}
+.comp1:hover .css i{
+    transform: scale(4) translateX(-7px);
+    color:#264de4;
+}
+.comp2:hover .sql i {
+    transform: scale(4) translateX(-7px);
+    color:#f29111;
+}
+.comp2:hover .php i {
+    transform: scale(4) translateX(-7px);
+    color:#787cb5;
+}
+.comp3:hover .symfony i{
+    transform: scale(4) translateX(-5px);
+    color:black;
+}
+.comp3:hover .tosa i {
+    transform: scale(4) translateX(-5px);
+    color: #1d6f42;
+}
+.comp4:hover .toeic i{
+    transform: scale(4) translateX(-7px);
+    background: 
+                linear-gradient(135deg, rgba(255, 255, 255, 0.8) 25%, rgba(200, 16, 46, 0.8) 25%, rgba(200, 16, 46, 0.8) 50%, rgba(255, 255, 255, 0.8) 50%, rgba(255, 255, 255, 0.8) 75%, rgba(1, 33, 105, 0.8) 75%), 
+                linear-gradient(45deg, rgba(255, 255, 255, 0.8) 25%, rgba(200, 16, 46, 0.8) 25%, rgba(200, 16, 46, 0.8) 50%, rgba(255, 255, 255, 0.8) 50%, rgba(255, 255, 255, 0.8) 75%, rgba(1, 33, 105, 0.8) 75%);
+                -webkit-background-clip: text; 
+                color: transparent;
+}
+.comp4:hover .voltaire i {
+    transform: scale(4) translateX(-7px);
+    background: linear-gradient(90deg, rgba(0, 85, 164, 0.8) 33%, rgba(255, 255, 255, 0.8) 33%, rgba(255, 255, 255, 0.8) 66%, rgba(239, 65, 53, 0.8) 66%); -webkit-background-clip: text; color: transparent;
+}
+
+
+
+/* 
+.comp .sql:hover:hover i{
+    transform: scale(4) translateX(-5px);
+    color: orange;
+}
+.comp .css:hover:hover i{
+    transform: scale(4) translateX(-5px);
+    color: orange;
+}
+.comp .php:hover:hover i{
+    transform: scale(4) translateX(-7px);
+    color: orange;
+}
+.comp .symfony:hover:hover i{
+    transform: scale(4) translateX(-6px);
+    color: orange;
+}
+.comp .tosa:hover:hover i{
+    transform: scale(4) translateX(-5px);
+    color: orange;
+}
+.comp .toeic:hover:hover i{
+    transform: scale(4) translateX(-7px);
+    color: orange;
+}
+.comp .voltaire:hover:hover i{
+    transform: scale(4) translateX(-7px);
+    color: orange;
+} */
+
+/* .all_comp:hover .css>i{
+    transform: scale(4) translateX(-7px);
+    color: orange;
+
+}
+.all_comp:hover .html>i{
+    transform: scale(4) translateX(-7px);
+    color: orange;
+
+} */
+
+
+
+
+
+
+/* .comp p:hover {
     color: rgb(202, 122, 11);
     transform: scale(1.2);
     transform: translateX(-30px);
-    
     cursor: pointer;
-}
+} */
 
 /* SECTION INTERETS */
 .interet {
@@ -424,12 +577,57 @@ body.light-mode a {
     header h1{
         transition: 300ms;
         font-size: 1.25em;
-        margin: 0;
-
-        justify-content: center;
-
+        margin: 0 2%;
+        /* justify-content: center; */
+        ;
     }
 
+    .comp p:hover{
+        /* padding-left: 20px; */
+
+        transition: 200ms;
+    }
+
+}
+
+
+@media screen and (max-width: 500px){
+    .comp p{
+        padding-left:0px;
+
+        font-size: 0.80em;
+        transition: 200ms;
+    }
+    .comp p:hover{
+        transition: 200ms;
+    }
+
+    .comp1:hover .html i {
+        transform: scale(1.8) translateX(-3px);
+        
+    }
+    .comp1:hover .css i{
+        transform:  scale(1.8) translateX(-3px);
+    }
+    .comp2:hover .sql i {
+        transform:  scale(1.8) translateX(-3px);
+    }
+    .comp2:hover .php i {
+        transform:  scale(1.8) translateX(-3px);
+    }
+    .comp3:hover .symfony i{
+        transform:  scale(1.8) translateX(-3px);
+    }
+    .comp3:hover .tosa i {
+        transform: scale(1.8) translateX(-3px);
+    }
+    .comp4:hover .toeic i{
+        transform:  scale(1.8) translateX(-4px);
+    }
+    .comp4:hover .voltaire i {
+        transform: scale(1.8) translateX(-4px);
+  
+    }
 }
 
 @media screen and (max-width: 400px){
@@ -443,4 +641,8 @@ body.light-mode a {
     
         text-align: left
     }
+}
+
+@media screen and (max-height : 500px){
+
 }
